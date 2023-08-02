@@ -1,0 +1,152 @@
+.card-body,
+.card {
+
+    width: 540px;
+    height: 827px;
+    /* UI Properties */
+    background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 5px 15px #0000000D;
+    /* border-radius: 8px; */
+    opacity: 1;
+
+    width: 100%;
+}
+.row{
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 5px 15px #0000000D;
+    border-radius: 8px;
+}
+
+
+.table {
+    text-align: left;
+    /* font: normal normal normal 15px/23px Poppins; */
+    letter-spacing: 0px;
+    color: #738194;
+    opacity: 1;
+}
+
+.arrow {
+
+    border-radius: 5px;
+    
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.card-body .header {
+
+    /* text-align: left; */
+    font: normal normal 600 20px/30px Poppins;
+    /* letter-spacing: 0px; */
+    color: #1F4280;
+    opacity: 1;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.row-content {
+    text-align: left;
+    /* font:15px/23px Poppins; */
+    letter-spacing: 0px;
+    color: #8491a3;
+    opacity: 1;
+}
+
+.first-content {
+    /* text-align: left; */
+    /* font: normal normal normal 15px/23px Poppins; */
+    letter-spacing: 0px;
+    color: #738194;
+    opacity: 1;
+    white-space: nowrap;
+}
+
+.table .dependencies {
+
+    font-weight: bold;
+    text-align: left;
+    /* font: normal normal 600 15px/23px Poppins; */
+    letter-spacing: 0px;
+    color: #738194;
+    opacity: 1;
+    height: 50px;
+    margin-left: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.table .second-card {
+    top: 575px;
+    left: 326px;
+    width: 1540px;
+    height: 267px;
+    /* UI Properties */
+    background: #F7F7F7 0% 0% no-repeat padding-box;
+    opacity: 1;
+    /* box-shadow: 0px 5px 15px #0000000D; */
+  
+}
+
+.table .sub-table {
+
+    width: 75%;
+    top: 878px;
+    left: 405px;
+    margin-left: 50px;
+    /* width: 1431px; */
+    height: 145px;
+
+   
+}
+
+.second-head {
+    text-align: left;
+    font: normal normal medium 15px/23px Poppins;
+    letter-spacing: 0px;
+    color: #009ADE;
+    opacity: 1;
+    
+    padding-bottom: 5px;
+    
+
+}
+
+.second-content {
+    text-align: left;
+    
+    letter-spacing: 0px;
+    color: #738194;
+    opacity: 1;
+   
+}
+
+
+
+fill-col {
+
+    font: var(--unnamed-font-style-normal) normal medium 15px/23px Poppins;
+    letter-spacing: var(--unnamed-character-spacing-0);
+    color: var(--unnamed-color-ffffff);
+    /* text-align: center; */
+    font: normal normal medium 15px/23px Poppins;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+
+}
+
+.card .fill-color {
+    top: 638px;
+    left: 326px;
+    width: 1540px;
+    height: 45px;
+    /* UI Properties */
+    background: #228BC4 0% 0% no-repeat padding-box;
+    opacity: 1;
+    color: #FFFFFF;
+    
+}

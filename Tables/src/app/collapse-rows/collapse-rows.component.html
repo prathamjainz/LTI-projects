@@ -1,0 +1,128 @@
+<div class="card">
+  <div class="card-body">
+    <div class="row">
+      <!-- <div class="col-20 col-md-20"> -->
+      <div class="card-body position-relative">
+        <div class="header">
+          <span>Members List</span>
+          <span>
+            <input class="form-control" type="text" placeholder="Search" [(ngModel)]="searchText">
+          </span>        
+        </div>
+        <!-- <div class="table-responsive cnstr-record product-tbl"> -->
+        <!-- <table class="table table-bordered heading-hvr"> -->
+        <table class="table">
+          <thead class="fill-color">
+            <tr align="center" class="fill-color">
+              <th width="50" class="fill-color">Full_Name</th>
+              <th class="fill-color">CHI_Status</th>
+              <th class="fill-color">Mobile_Number</th>
+              <th class="fill-color">ID_Number</th>
+              <th class="fill-color">Adding_Date</th>
+              <th class="fill-color">Classes_Network</th>
+              <th class="fill-color">Actions</th>
+            </tr>
+          </thead>
+          <tbody
+            class="table-row-not-expanded"
+            *ngFor="let row of data | search: searchText ; let i = index"
+          >
+            <tr>
+              <td align="left" class="first-content">{{ row.Full_Name }}</td>
+              <td align="center" class="first-content">{{ row.CHI_Status }}</td>
+              <td align="center" class="first-content">
+                {{ row.Mobile_Number }}
+              </td>
+              <td align="center" class="first-content">{{ row.ID_Number }}</td>
+              <td align="center" class="first-content">
+                {{ row.Adding_Date }}
+              </td>
+              <td align="center" class="first-content">
+                {{ row.Classes_Network }}
+              </td>
+              <td align="center">
+                <a
+                  href="#"
+                  class="arrow"
+                  *ngIf="row.isExpanded == false && row.Dependencies == 'present'"
+                  (click)="selectItemCoverages(row.Index, row.isExpanded)"
+                >
+                  <span>Action</span>
+                  <span
+                    ><img
+                      src="/assets/down-arrow.png"
+                      class="arrow"
+                      width="25"
+                      height="27"
+                    />
+                  </span>
+                </a>
+                <a
+                  href="#"
+                  class="arrow"
+                  *ngIf="row.isExpanded == true"
+                  (click)="selectItemCoverages(row.Index, row.isExpanded)"
+                >
+                  <span>Action</span>
+                  <span>
+                    <img
+                      src="/assets/up-arrow.png"
+                      width="25"
+                      height="27"
+                      class="arrow"
+                    />
+                  </span>
+                </a>
+              </td>
+            </tr>
+
+            <tr *ngIf="row.isExpanded == 1" class="second-card">
+              <td colspan="8" class="second-card">
+                <div class="dependencies">
+                  <span>Dependencies</span><span>Total Dependencies: 3</span>
+                </div>
+
+                <table class="sub-table">
+                  <thead>
+                    <tr>
+                      <th class="second-head">Full_Name</th>
+                      <th class="second-head">CHI_Status</th>
+                      <th class="second-head">ID_Number</th>
+                      <th class="second-head">Relation</th>
+                      <th class="second-head">Gender</th>
+                      
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let dep of dep_data">
+                      <ng-container *ngIf="row.Index == dep.Index">
+                        <td align="left" class="second-content">
+                          {{ dep.Full_Name }}
+                        </td>
+                        <td align="left" class="second-content">
+                          {{ dep.CHI_Status }}
+                        </td>
+                        <td align="left" class="second-content">
+                          {{ dep.ID_Number }}
+                        </td>
+                        <td align="left" class="second-content">
+                          {{ dep.Relation }}
+                        </td>
+                        <td align="left" class="second-content">
+                          {{ dep.Gender }}
+                        </td>
+                      </ng-container>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- </div> -->
+<!-- </div> -->

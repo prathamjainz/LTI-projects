@@ -1,0 +1,83 @@
+
+<div class="card">
+  <div class="card-body pb-0">
+    <h4 style="text-align: center;">Example of Angular Nested Grid</h4>
+    <div class="row">
+      <div class="col-12 col-md-12">
+        <div class="card">
+
+          <div class="card-body position-relative">
+            <div class="table-responsive cnstr-record product-tbl">
+              <table class="table table-bordered heading-hvr">
+                <thead>
+                  <tr>
+                    <th>&nbsp;</th>
+                    <th width="50">Art.No
+                    </th>
+                    <th>Brand</th>
+                    <th>
+                      Price/Unit</th>
+                    <th>Provider</th>
+                    <th>P. Art. N</th>
+                    <th>S. A/C</th>
+                    <th>Buy A/C</th>
+                  </tr>
+                </thead>
+
+                <tbody *ngFor="let product of products; let i = index">
+
+                  <tr>
+                    <td align="center">
+                      <a class="expand-row" *ngIf="!hideme[i]" (click)="showProductCountryInfo(i,product.ProductId)">
+                        <img src="../../assets/Images/plus.png" />
+
+                      </a>
+                      <a class="expand-row" *ngIf="hideme[i]" (click)="hideme[i] = !hideme[i]">
+                        <img src="../../assets/Images/minus.png" />
+                      </a>
+                    </td>
+                    <td align="center">{{product.ArtNo}}</td>
+                    <td>{{product.Brand}}</td>
+                    <td>{{product.Price }}</td>
+                    <td>{{product.Provider}}</td>
+                    <td>{{product.ProviderArtNo}}</td>
+                    <td>{{product.SalesAccount}}</td>
+                    <td>{{product.BuyAccount}}</td>
+                  </tr>
+
+                  <!-- <div id="myresult" class="img-zoom-result"></div> -->
+                  <tr [hidden]="!hideme[i]" class="sub-table no-bg">
+                    <td align="center">&nbsp;</td>
+                    <td colspan="15" class="p-0">
+                      <table class="table mb-0 table-striped">
+                        <thead class="bg-dark text-white">
+                          <tr>
+                            <th>CountryName</th>
+                            <th>Price/Unit</th>
+                            <th>Sales Account</th>
+                            <th>Buy Account</th>
+                            
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr *ngFor="let productCountryInfo of productCountryInformation[i]">
+                            <td>{{productCountryInfo.CountryName}}</td>
+                            <td>{{productCountryInfo.Price}}</td>
+                            <td>{{productCountryInfo.SalesAccount}}</td>
+                            <td>{{productCountryInfo.BuyAccount}}</td>
+                           
+                          </tr>
+                        </tbody>
+                      </table>
+                    </td>
+                  </tr>
+
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
